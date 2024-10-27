@@ -1,0 +1,30 @@
+{
+  "name": "gh-issue-upload-file-to-diff-repo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "prepare": "lefthook install",
+    "setup": "$npm_execpath install && cp -n .env.example .env; exit 0",
+    "dev": "run-s clean && vite",
+    "build": "run-s clean && tsc && vite build",
+    "clean": "run-p clean:*",
+    "clean:dist": "rimraf dist",
+    "fmt": "biome format --write .",
+    "lnt": "biome lint --write .",
+    "che": "biome check --write .",
+    "preview": "vite preview",
+    "test": "exit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@crxjs/vite-plugin": "^2.0.0-beta.28",
+    "@types/chrome": "^0.0.279",
+    "@types/node": "^22.8.1",
+    "lefthook": "^1.8.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

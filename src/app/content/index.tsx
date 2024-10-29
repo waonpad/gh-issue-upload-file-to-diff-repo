@@ -50,7 +50,7 @@ const keyUpListener = (event: KeyboardEvent) => {
   }
 };
 
-const process = ({ newUrl }: { newUrl: string }) => {
+const manageEventListeners = ({ newUrl }: { newUrl: string }) => {
   // 新しいURLが現在のURLと同じ場合は何もしない(複数回呼ばれてしまう事の対策)
   if (newUrl === currentUrl) return;
 
@@ -81,8 +81,8 @@ const process = ({ newUrl }: { newUrl: string }) => {
 
 // Service Workerからのメッセージを受け取ったら処理を実行する
 browser.runtime.onMessage.addListener((message: Message) => {
-  process({ newUrl: message.url });
+  manageEventListeners({ newUrl: message.url });
 });
 
 // 初回実行
-process({ newUrl: location.href });
+manageEventListeners({ newUrl: location.href });

@@ -1,5 +1,9 @@
 # GitHubのIssueへのファイル添付を別リポジトリのものとして扱うキーボードショートカットを提供するChrome拡張機能
 
+> [!CAUTION]
+> 現在この拡張機能は動作しません。  
+> やる気が出たら代替の方法にアップデートしますが、IssueやPRも歓迎します。
+
 [GitHubのIssue, PRへのファイル添付は別リポジトリのものとして扱える | waonpad blog](https://waonpad.github.io/blog/articles/29/)
 
 # 使用方法
